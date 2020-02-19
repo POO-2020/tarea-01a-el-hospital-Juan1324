@@ -8,6 +8,10 @@ class Fecha {
 
     }
     getAños(){
+        return(this.años);
     }
     
 }
+let años= new Fecha(new Date(2000,1,10))
+console.log(años.getAños());
+
