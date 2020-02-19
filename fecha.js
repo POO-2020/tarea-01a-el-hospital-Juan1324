@@ -13,10 +13,14 @@ class Fecha {
     getMeses(){
         return(this.años*12)
     }
-    
+    getSemanas(){
+        return(this.años*12*4)
+    }
     
 }
 let años= new Fecha(new Date(2000,1,10))
 console.log(años.getAños());
 console.log(años.getMeses());
+console.log(años.getSemanas());
+
 
