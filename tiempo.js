@@ -5,7 +5,12 @@ class Tiempo{
         this.periodo=periodo;
 
         getFormato12(){
-            
+            return `${this.hora}:${this.minutos} ${this.periodo}`
+    
+        }
+        getFormato1224(){
+
+
         }
 
     }
