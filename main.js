@@ -16,6 +16,7 @@ class Main{
         console.log(años.getSemanas());
         console.log(años.getDias());
         console.log(años.getFecha());
+        console.log(años.getDia());
     }
     probarNombre(){
         let nombre1= new Nombre("Juan ","Ramos ","Campos ");
