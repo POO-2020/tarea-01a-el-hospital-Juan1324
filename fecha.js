@@ -5,6 +5,7 @@ export default class Fecha {
         this.años = Math.floor(((this.fechaHoy - this.fecha) / (1000 * 60 * 60 * 24) / 365));
         this.formatoFecha=new Date(año,mes -1, dia);
         this.mesAño=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
+        this.diaSemana=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
  
 
 
@@ -24,6 +25,11 @@ export default class Fecha {
     getFecha(){
         let mes=this.mesAño[this.fecha.getMonth()];
         return(`${this.fecha.getDate()}/${mes}/${this.fecha.getFullYear()}`);
+    }
+    getDia(){
+        let dia=this.diaSemana[this.fecha.getDay()];
+        return(dia);
+
     }
     
 }
