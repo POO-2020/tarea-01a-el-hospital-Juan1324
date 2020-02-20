@@ -1,11 +1,12 @@
 import Fecha from "./fecha.js";
 import Nombre from "./nombre.js"
 import Tiempo from "./tiempo.js"
-
+import Paciente from "./paciente.js";
 
 class Main{
 
     constructor(){
+        this.paciente1=new Paciente("Juan Ramos Campos", new Fecha(12,2,2005), "312-345-566");
 
     }
 
@@ -31,8 +32,14 @@ class Main{
         console.log(hora.getFormato24())
     }
 
+    probarPaciente(){
+        console.log(this.paciente1.getPerfil());
+
+    }
+
 }
 let app=new Main();
 app.probarFecha();
 app.probarNombre();
 app.probarTiempo();
+app.probarPaciente();
