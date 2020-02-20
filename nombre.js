@@ -1,4 +1,4 @@
-class Nombre {
+export default class Nombre {
     constructor(nombre,apellidoPaterno,apellidoMaterno){
         this.nombre=nombre;
         this.apellidoPaterno=apellidoPaterno;
@@ -22,7 +22,3 @@ class Nombre {
 
     }
 }
-let nombre1= new Nombre("Juan ","Ramos ","Campos ");
-console.log(nombre1.getNombreCompleto());
-console.log(nombre1.getApellidoNombre());
-console.log(nombre1.getIniciales());
