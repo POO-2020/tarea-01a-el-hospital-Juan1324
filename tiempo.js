@@ -1,4 +1,4 @@
-class Tiempo{
+export default class Tiempo{
     constructor(hora,minutos,periodo){
         this.hora=hora;
         this.minutos=minutos;
@@ -17,6 +17,3 @@ class Tiempo{
 
         }
 }
-let hora= new Tiempo(1,55,"pm")
-console.log(hora.getFormato12())
-console.log(hora.getFormato24())
