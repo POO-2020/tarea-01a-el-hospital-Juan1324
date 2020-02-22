@@ -1,11 +1,15 @@
 export default class Fecha {
-    constructor(fecha,dia,mes,año){
-        this.fecha= fecha;
-        this.fechaHoy= new Date();
-        this.años = Math.floor(((this.fechaHoy - this.fecha) / (1000 * 60 * 60 * 24) / 365));
-        this.formatoFecha=new Date(año,mes -1, dia);
+    constructor(año,mes,dia){
+  
+
+        this.fecha=new Date(año,mes -1, dia);
+
         this.mesAño=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
+
         this.diaSemana=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
+        
+        this.fechaHoy= new Date(Date.now());
+        this.años = this.fechaHoy.getFullYear()-this.fecha.getFullYear()
  
 
 
