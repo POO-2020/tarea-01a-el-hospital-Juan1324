@@ -7,7 +7,7 @@ export default class Fecha {
         this.mesAño=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
 
         this.diaSemana=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
-        
+
         this.fechaHoy= new Date(Date.now());
         this.años = this.fechaHoy.getFullYear()-this.fecha.getFullYear()
  
@@ -21,10 +21,10 @@ export default class Fecha {
         return(this.años*12)
     }
     getSemanas(){
-        return(this.años*12*4)
+        return(this.años*52)
     }
     getDias(){
-        return(this.años*12*4*365)
+        return(this.años*365)
     }
     getFecha(){
         let mes=this.mesAño[this.fecha.getMonth()];
