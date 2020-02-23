@@ -1,11 +1,12 @@
 class Hospital{
-    constructor(nombre,direcciones,doctores,citas){
+    constructor(nombre,direcciones,doctor,citas){
         this.nombre=nombre;
         this.direcciones=direcciones;
-        this.doctores=doctores;
-        this.citas=citas;
+        this.doctores=[]
+        this.citas=[]
     }
-    registrarDoctor(){
+    registrarDoctores(doctor){
+        this.doctor.push(doctor)
 
     }
     listarDoctores(){
@@ -15,6 +16,6 @@ class Hospital{
 
     }
     listarCita(){
-        
+
     }
 }
