@@ -9,42 +9,38 @@ import Hospital from "./hospital.js"
 class Main{
 
     constructor(){
-
+        this.años= new Fecha(2,2,2001)
+        this.nombre1= new Nombre("Juan ","Ramos ","Campos ");
+        this.hora1= new Tiempo(1,55,"pm")
+        this.paciente1= new Paciente(new Nombre("Gregorio ","Ramos ","Campos"),"312-109-8921",new Fecha(12,10,2018))
 
     }
 
     probarFecha(){
-        console.log("////////////////////Fecha///////////////////////////////////")
-        let años= new Fecha(2,2,2001)
-        console.log(`Años: ${años.getAños()}`);
-        console.log(`Meses: ${años.getMeses()}`);
-        console.log(`Semana: ${años.getSemanas()}`);
-        console.log(`Dias: ${años.getDias()}`);
-        console.log(`Fecha: ${años.getFecha()}`);
-        console.log(`Dia de la semana: ${años.getDia()}`);
+        console.log("////////////////////Fecha///////////////////////////////////") 
+        console.log(`Años: ${this.años.getAños()}`);
+        console.log(`Meses: ${this.años.getMeses()}`);
+        console.log(`Semana: ${this.años.getSemanas()}`);
+        console.log(`Dias: ${this.años.getDias()}`);
+        console.log(`Fecha: ${this.años.getFecha()}`);
+        console.log(`Dia de la semana: ${this.años.getDia()}`);
     }
     probarNombre(){
         console.log("////////////////////Nombres///////////////////////////////////")
-        let nombre1= new Nombre("Juan ","Ramos ","Campos ");
-        console.log(nombre1.getNombreCompleto());
-        console.log(nombre1.getApellidoNombre());
-        console.log(nombre1.getIniciales());
+        console.log(this.nombre1.getNombreCompleto());
+        console.log(this.nombre1.getApellidoNombre());
+        console.log(this.nombre1.getIniciales());
     }
 
     probarTiempo(){
         console.log("////////////////////Tiempo///////////////////////////////////")
-        let hora= new Tiempo(1,55,"pm")
-        console.log(hora.getFormato12())
-        console.log(hora.getFormato24())
+        console.log(this.hora1.getFormato12())
+        console.log(this.hora1.getFormato24())
     }
 
     probarPaciente(){
         console.log("////////////////////Paciente///////////////////////////////////")
-        let nombre= new Nombre("Sara ","Campos ","Gómez")
-        let numerotel=("312-109-6996")
-        let fecha= new Fecha(2000,2,15)
-        let paciente= new Paciente(nombre,numerotel,fecha)
-        console.log(paciente.getPerfil())
+        console.log(this.paciente1.getPerfil())
 
     }
     probarDoctor(){
