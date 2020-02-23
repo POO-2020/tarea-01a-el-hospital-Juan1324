@@ -1,5 +1,5 @@
 export default class Fecha {
-    constructor(año,mes,dia){
+    constructor(dia,mes,año){
   
 
         this.fecha=new Date(año,mes -1, dia);
