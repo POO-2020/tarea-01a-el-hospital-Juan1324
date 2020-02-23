@@ -21,7 +21,9 @@ export default class Fecha {
         return (`${totalMeses}`);
     }
     getSemanas(){
-        return(this.años*52)
+        let canAños = (1000 * 60 * 60 * 24 * 365)/52;
+        let totalAños = Math.trunc(this.difFecha/canAños)
+        return (`${totalAños}`);
     }
     getDias(){
         return(this.años*365)
