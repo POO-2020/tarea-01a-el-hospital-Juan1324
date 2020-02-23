@@ -27,6 +27,7 @@ class Main{
         this.cita2= new Cita(new Fecha(9,3,2020),new Tiempo(7,30,"am"),this.doctor2,this.paciente2)
         this.cita3= new Cita(new Fecha(23,9,2020),new Tiempo(3,20,"pm"),this.doctor3,this.paciente3)
 
+        this.hospitales = new Hospital("Hospital RC", "Av. Niños Héroes #514")
     }
 
     probarFecha(){
@@ -66,15 +67,18 @@ class Main{
         console.log(this.cita1.getCita())
     }
     probarHospiltal(){
-            this.hospital.registrarDoctor(this.doctor1)
-            this.hospital.registrarDoctor(this.doctor2)
-            this.hospital.registrarDoctor(this.doctor3)
-            this.hospital.listarDoctores()
-            console.log("////////////////////Lista de Citas///////////////////////////////////")
-            this.hospital.registrarCita(this.cita1)
-            this.hospital.registrarCita(this.cita2)
-            this.hospital.registrarCita(this.cita3) 
-            this.hospital.listarCitas()
+        this.hospitales.registrarDoctor(this.doctor1)
+        this.hospitales.registrarDoctor(this.doctor2)
+        this.hospitales.registrarDoctor(this.doctor3)
+        
+        this.hospitales.registrarCita(this.cita1)
+        this.hospitales.registrarCita(this.cita2)
+        this.hospitales.registrarCita(this.cita3)
+
+        console.log("////////////////////Listar Doctores///////////////////////////////////")
+        this.hospitales.listarDoctores()
+        console.log("////////////////////Listar Citas///////////////////////////////////")
+        this.hospitales.listarCitas()
 
       
        
