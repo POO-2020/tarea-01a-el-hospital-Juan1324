@@ -1,7 +1,6 @@
 export default class Fecha {
     constructor(dia,mes,año){
   
-
         this.fecha=new Date(año,mes -1, dia);
 
         this.mesAño=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
