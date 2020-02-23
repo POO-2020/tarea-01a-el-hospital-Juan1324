@@ -8,17 +8,17 @@ export default class Fecha {
 
         this.diaSemana=["Domingo","Martes","Miercoles","Jueves","Viernes","Sabado","Lunes"]
 
-        this.fechaHoy= new Date(Date.now());
-        this.años = this.fechaHoy.getFullYear()-this.fecha.getFullYear()
- 
-
-
+        this.difFecha= new Date (Date.now() - this.fecha)
     }
     getAños(){
-        return(this.años);
+        let canAños = 1000 * 60 * 60 * 24 * 365;
+        let totalAños = Math.trunc(this.difFecha/canAños)
+        return (`${totalAños}`);
     }
     getMeses(){
-        return(this.años*12)
+        let canMeses = (1000 * 60 * 60 * 24 * 365)/12;
+        let totalMeses = Math.trunc(this.difFecha/canMeses)
+        return (`${totalMeses}`);
     }
     getSemanas(){
         return(this.años*52)
