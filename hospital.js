@@ -8,7 +8,6 @@ export default class Hospital{
     }
     registrarDoctor(doctor){
         this.doctores.push(doctor)
-
     }
     listarDoctores(){
         this.doctores.forEach((doctor, x) => {
