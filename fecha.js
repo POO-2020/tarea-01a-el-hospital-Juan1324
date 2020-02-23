@@ -6,7 +6,7 @@ export default class Fecha {
 
         this.mesAño=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
 
-        this.diaSemana=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
+        this.diaSemana=["Domingo","Martes","Miercoles","Jueves","Viernes","Sabado","Lunes"]
 
         this.fechaHoy= new Date(Date.now());
         this.años = this.fechaHoy.getFullYear()-this.fecha.getFullYear()
