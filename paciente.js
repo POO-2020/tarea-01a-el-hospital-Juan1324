@@ -6,7 +6,6 @@ export default class Paciente {
         this.nombre=nombre;
         this.numerotel=numerotel;
         this.fecha=fecha;
-
     }
 
     getPerfil(){
