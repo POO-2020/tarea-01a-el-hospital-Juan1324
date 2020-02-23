@@ -6,7 +6,7 @@ export default class Fecha {
 
         this.mesAño=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sept","Oct","Nov","Dic"]
 
-        this.diaSemana=["Domingo","Martes","Miercoles","Jueves","Viernes","Sabado","Lunes"]
+        this.diaSemana=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
 
         this.difFecha= new Date (Date.now() - this.fecha)
     }
@@ -31,12 +31,10 @@ export default class Fecha {
         return (`${totalDias}`);
     }
     getFecha(){
-        let mes=this.mesAño[this.fecha.getMonth()];
-        return(`${this.fecha.getDate()}/${mes}/${this.fecha.getFullYear()}`);
+        return(`${this.fecha.getDate()}/${this.mesAño[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`);
     }
     getDia(){
-        let dia=this.diaSemana[this.fecha.getDay()];
-        return(dia);
+        return(`${this.diaSemana[this.fecha.getDay()]}`);
 
     }
     
