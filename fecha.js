@@ -21,12 +21,14 @@ export default class Fecha {
         return (`${totalMeses}`);
     }
     getSemanas(){
-        let canAños = (1000 * 60 * 60 * 24 * 365)/52;
-        let totalAños = Math.trunc(this.difFecha/canAños)
-        return (`${totalAños}`);
+        let canSemanas = (1000 * 60 * 60 * 24 * 365)/52;
+        let totalSemanas = Math.trunc(this.difFecha/canSemanas)
+        return (`${totalSemanas}`);
     }
     getDias(){
-        return(this.años*365)
+        let canDias = 1000 * 60 * 60 * 24;
+        let totalDias = Math.trunc(this.difFecha/canDias)
+        return (`${totalDias}`);
     }
     getFecha(){
         let mes=this.mesAño[this.fecha.getMonth()];
