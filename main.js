@@ -6,7 +6,6 @@ import Paciente from "./paciente.js";
 class Main{
 
     constructor(){
-        this.paciente1=new Paciente("Juan Ramos Campos", new Fecha(12,2,2005), "312-345-566");
 
     }
 
@@ -33,7 +32,13 @@ class Main{
     }
 
     probarPaciente(){
-        console.log(this.paciente1.getPerfil());
+        let nombre= new Nombre("Rosa ","Campos ","Carrillo")
+        let numero=(3121096996)
+        let fecha= new Fecha(2000,2,15)
+        let paciente= new Paciente(nombre,numero,fecha)
+        console.log(paciente.getPerfil())
+
+
 
     }
 
