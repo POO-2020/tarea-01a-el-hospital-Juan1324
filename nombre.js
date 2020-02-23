@@ -3,7 +3,6 @@ export default class Nombre {
         this.nombre=nombre;
         this.apellidoPaterno=apellidoPaterno;
         this.apellidoMaterno=apellidoMaterno;
-
     }
     getNombreCompleto(){
         return(`${this.nombre}${this.apellidoPaterno}${this.apellidoMaterno}`)
