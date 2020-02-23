@@ -1,7 +1,8 @@
-import Fecha from "./fecha.js";
+import Fecha from "./fecha.js"
 import Nombre from "./nombre.js"
 import Tiempo from "./tiempo.js"
-import Paciente from "./paciente.js";
+import Paciente from "./paciente.js"
+import Doctor from "./doctor.js"
 
 class Main{
 
@@ -33,13 +34,19 @@ class Main{
 
     probarPaciente(){
         let nombre= new Nombre("Rosa ","Campos ","Carrillo")
-        let numero=(3121096996)
+        let numerotel=(3121096996)
         let fecha= new Fecha(2000,2,15)
-        let paciente= new Paciente(nombre,numero,fecha)
+        let paciente= new Paciente(nombre,numerotel,fecha)
         console.log(paciente.getPerfil())
 
-
-
+    }
+    probarDoctor(){
+        let nombre= new Nombre("Gregorio ","Ramos ","Campos")
+        let especialidad=("Neurologia")
+        let numerotel=(3121099876)
+        let cedula=("JKDG12KJDSHJ")
+        let doctor= new Doctor(nombre,especialidad,numerotel,cedula)
+        console.log(doctor.getPerfil())
     }
 
 }
@@ -48,3 +55,4 @@ app.probarFecha();
 app.probarNombre();
 app.probarTiempo();
 app.probarPaciente();
+app.probarDoctor();
