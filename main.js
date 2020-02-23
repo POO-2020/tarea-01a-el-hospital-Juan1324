@@ -10,9 +10,22 @@ class Main{
 
     constructor(){
         this.años= new Fecha(2,2,2001)
+        
         this.nombre1= new Nombre("Juan ","Ramos ","Campos ");
-        this.hora1= new Tiempo(1,55,"pm")
-        this.paciente1= new Paciente(new Nombre("Gregorio ","Ramos ","Campos"),"312-109-8921",new Fecha(12,10,2018))
+        
+        this.hora1= new Tiempo(1,40,"pm")
+        
+        this.paciente1= new Paciente(new Nombre("Carlos ","Ramirez ","Cedillo"),"312-109-8921",new Fecha(12,10,2018))
+        this.paciente2= new Paciente(new Nombre("Germán ","Martínez ","Zantolla"),"312-109-8921",new Fecha(12,10,2018))
+        this.paciente3= new Paciente(new Nombre("José ","Macias ","Olivera"),"312-109-8921",new Fecha(12,10,2018))
+        
+        this.doctor1= new Doctor("JSGD343","Cirujano",new Nombre("Christian ","Mora ","Trujillo"),"312-102-1029")
+        this.doctor2= new Doctor("PSJD394","Neurologo",new Nombre("Belén ","Sánchez ","Cruz"),"312-982-4029")
+        this.doctor3= new Doctor("JSGD343","Pedíatra",new Nombre("Alexa ","Vega ","Trujillo"),"312-332-4923")
+
+        this.cita1= new Cita(new Fecha(13,10,2020),new Tiempo(5,25,"pm"),this.doctor1,this.paciente1)
+        this.cita2= new Cita(new Fecha(9,3,2020),new Tiempo(7,30,"am"),this.doctor2,this.paciente2)
+        this.cita3= new Cita(new Fecha(23,9,2020),new Tiempo(3,20,"pm"),this.doctor3,this.paciente3)
 
     }
 
@@ -45,42 +58,22 @@ class Main{
     }
     probarDoctor(){
         console.log("////////////////////Doctor///////////////////////////////////")
-        let cedula=("JKDG324")
-        let especialidad=("Neurologia")
-        let nombre= new Nombre("Gregorio ","Ramos ","Ceballos")
-        let numerotel=("312-109-9876")
-        let doctor= new Doctor(cedula,especialidad,nombre,numerotel)
-        console.log(doctor.getPerfil())
+        console.log(this.doctor1.getPerfil())
 
     }
     probarCita(){
         console.log("////////////////////Cita///////////////////////////////////")
-        let fecha= new Fecha(5,10,2002)
-        let hora= new Tiempo(1,44,"pm")
-        let doctor= new Doctor("312-190-9898","Cardiologia",new Nombre("Dr.Gregorio ","Ramos ","Ceballos"),"JKDG324" )
-        let paciente= new Paciente(new Nombre("Christian ","López ","Astilla"),new Fecha(1,10,2010),"312-182-9876")
-        let cita= new Cita(fecha,hora,doctor,paciente)
-        console.log(cita.getCita())
+        console.log(this.cita1.getCita())
     }
     probarHospiltal(){
-            console.log("////////////////////Lista de Doctores///////////////////////////////////")
-            let doctor1= new Doctor("312-108-8987","Neurologia", new Nombre("Dr.Gregorio ","Ramos ","Ceballos"),"JKDG324" )
-
-            let doctor2= new Doctor("312-279-3098","Neurocirujana", new Nombre("Dr.Cintia ","Martinez ","Zárate"),"PDHR935")
-
-            let doctor3= new Doctor("312-279-3070","Neurocirujano", new Nombre("Dr.Carlos ","Nava ","Campos"),"PDKD937")
-
-            let cita1= new Cita(new Fecha(1,4,2020),new Tiempo(15,50,"pm"),new Doctor("312-182-9876","Neurologia", new Nombre("Dr.Gregorio ","Ramos ","Ceballos"),"JKDG324"), new Paciente(new Nombre("Karen ","Oca ","Álvarez"),new Fecha(19,8,2020),"312-123-3679"))
-
-            let cita2= new Cita(new Fecha(10,3,2020),new Tiempo(13,10,"pm"),new Doctor("312-287-9663","Neurocirujana", new Nombre("Dr.Cintia ","Martinez ","Zárate"),"PDHR935"), new Paciente(new Nombre("Celina ","Cervantes ","Villa señor"),new Fecha(11,4,2020),"312-182-1098"))
-
-            this.hospital.registrarDoctor(doctor1)
-            this.hospital.registrarDoctor(doctor2)
-            this.hospital.registrarDoctor(doctor3)
+            this.hospital.registrarDoctor(this.doctor1)
+            this.hospital.registrarDoctor(this.doctor2)
+            this.hospital.registrarDoctor(this.doctor3)
             this.hospital.listarDoctores()
             console.log("////////////////////Lista de Citas///////////////////////////////////")
-            this.hospital.registrarCita(cita1)
-            this.hospital.registrarCita(cita2) 
+            this.hospital.registrarCita(this.cita1)
+            this.hospital.registrarCita(this.cita2)
+            this.hospital.registrarCita(this.cita3) 
             this.hospital.listarCitas()
 
       
