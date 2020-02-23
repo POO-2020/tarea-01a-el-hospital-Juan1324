@@ -4,6 +4,7 @@ import Tiempo from "./tiempo.js"
 import Paciente from "./paciente.js"
 import doctor from "./doctor.js"
 export default class Cita{
+    
     constructor(fecha,hora,doctor,paciente){
         this.fecha=fecha;
         this.hora=hora;
