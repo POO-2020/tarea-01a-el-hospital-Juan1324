@@ -11,13 +11,13 @@ class Main{
     }
 
     probarFecha(){
-        let años= new Fecha(2000,1,10)
-        console.log(años.getAños());
-        console.log(años.getMeses());
-        console.log(años.getSemanas());
-        console.log(años.getDias());
-        console.log(años.getFecha());
-        console.log(años.getDia());
+        let años= new Fecha(2020,2,21)
+        console.log(`Años: ${años.getAños()}`);
+        console.log(`Meses: ${años.getMeses()}`);
+        console.log(`Semana: ${años.getSemanas()}`);
+        console.log(`Dias: ${años.getDias()}`);
+        console.log(`Fecha: ${años.getFecha()}`);
+        console.log(`Dia de la semana: ${años.getDia()}`);
     }
     probarNombre(){
         let nombre1= new Nombre("Juan ","Ramos ","Campos ");
