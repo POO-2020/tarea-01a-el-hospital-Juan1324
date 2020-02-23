@@ -11,7 +11,7 @@ class Main{
     }
 
     probarFecha(){
-        let años= new Fecha(new Date(2000,1,10))
+        let años= new Fecha(2000,1,10)
         console.log(años.getAños());
         console.log(años.getMeses());
         console.log(años.getSemanas());
