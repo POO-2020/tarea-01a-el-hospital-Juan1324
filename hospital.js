@@ -7,7 +7,7 @@ export default class Hospital{
         this.citas=[]
     }
     registrarDoctor(doctor){
-        this.doctores.push(doctor)
+        this.doctores.push(doctor);
     }
     listarDoctores(){
         this.doctores.forEach((doctor, x) => {
@@ -16,12 +16,12 @@ export default class Hospital{
 
     }
     registrarCita(cita){
-        this.citas.push(cita)
+        this.citas.push(cita);
 
     }
     listarCitas(){
         this.citas.forEach((cita,y) => {
-            console.log(`(${y+1}) ${cita.getCita()}`)
+            console.log(`(${y+1}) ${cita.getCita()}`);
         })
 
     }

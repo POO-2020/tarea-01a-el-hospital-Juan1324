@@ -7,6 +7,6 @@ export default class Doctor{
         this.numerotel=numerotel;
     }
     getPerfil(){
-        return(`${this.cedula},${this.especialidad},${this.nombre.getNombreCompleto()},${this.numerotel}`)
+        return(`${this.cedula},${this.especialidad},${this.nombre.getNombreCompleto()},${this.numerotel}`);
     }
 }

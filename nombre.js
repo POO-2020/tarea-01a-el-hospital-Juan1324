@@ -5,11 +5,11 @@ export default class Nombre {
         this.apellidoMaterno=apellidoMaterno;
     }
     getNombreCompleto(){
-        return(`${this.nombre}${this.apellidoPaterno}${this.apellidoMaterno}`)
+        return(`${this.nombre}${this.apellidoPaterno}${this.apellidoMaterno}`);
 
     }
     getApellidoNombre(){
-        return(`${this.apellidoPaterno}${this.apellidoMaterno}${this.nombre}`)
+        return(`${this.apellidoPaterno}${this.apellidoMaterno}${this.nombre}`);
 
     }
     getIniciales(){
@@ -17,7 +17,6 @@ export default class Nombre {
         let y=this.apellidoPaterno[0]
         let z=this.apellidoMaterno[0]
 
-        return(`${x}${y}${z}`)
-
+        return(`${x}${y}${z}`);
     }
 }

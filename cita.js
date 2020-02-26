@@ -12,6 +12,6 @@ export default class Cita{
         this.paciente=paciente;
     }
     getCita(){
-        return(`${this.fecha.getFecha()},${this.hora.getFormato24()},${this.doctor.nombre.getNombreCompleto()},${this.paciente.nombre.getNombreCompleto()}`)
+        return(`${this.fecha.getFecha()},${this.hora.getFormato24()},${this.doctor.nombre.getNombreCompleto()},${this.paciente.nombre.getNombreCompleto()}`);
     }
 }

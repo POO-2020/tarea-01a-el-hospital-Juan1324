@@ -7,7 +7,6 @@ export default class Paciente {
         this.numerotel=numerotel;
         this.fecha=fecha;
     }
-
     getPerfil(){
         return(`${this.nombre.getNombreCompleto()},${this.fecha.getFecha()},${this.numerotel}`);
 
